@@ -1,0 +1,19 @@
+/*This is a CSS file*/
+
+.box{
+	height:200px;
+	width:200px;
+	}
+	
+.blue{
+	background-color:blue;
+}
+
+.red{
+	background-color:red;
+}
+
+p{
+	color:white;
+	padding:5px;
+	}

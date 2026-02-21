@@ -1,0 +1,22 @@
+#timelinebox{
+	background-color: #B8AE9C;
+	border-style: solid;
+	border: black;
+	border-radius: 15px;
+	height: 350px;
+	width: 800px;
+	font-family: "helvetica";
+	float: left;
+	}
+	
+.box{
+	display: inline;
+	color: black;
+	border-style: solid;
+	border: grey;
+	border-radius: 15px;
+	height: 100px;
+	width: 100px;
+	font-family: "helvetica";
+	float: left;
+	}

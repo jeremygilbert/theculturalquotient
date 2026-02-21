@@ -1,0 +1,111 @@
+body{
+	background-color: #434345;
+	}
+
+
+p{
+	font-family: 'Sintony', sans-serif;
+	}
+	
+#font{
+	color: white;
+	}
+	
+#banner{
+	width: 100%;
+	float: left;
+	}
+
+.page-wrap{
+	width: 60%;
+	background-color: #DFE5E3;
+	padding: 30px;
+	margin: 0 auto;
+	padding-top: 0px;
+	margin-top: 0px;
+	}
+	
+.heading{
+	font-family: 'Amatic Sc', cursive;
+	font-size: 40px;
+	}
+
+.quote{
+	margin: 0 auto;
+	position: center;
+	clear: both;
+	width: 100%;
+	float: left;
+	}
+
+#infographic{
+	width: 100%;
+	float: left;
+	margin: 0 auto;
+	}
+	
+
+#navigation {
+display: block;
+margin-left: -2px;
+font-size: 19px;
+color: white;
+font-family: 'Amatic SC', cursive;
+position: fixed;
+left: 0;
+top: 40%;
+width: 200px;
+height: 256px;
+margin-top: -2.5em;
+background-image: url('ipadblank.png');
+background-repeat: no-repeat;
+background-position:center center;
+
+}
+
+#navigation ul { 
+list-style-type: none; 
+padding-left: 15%;
+}
+
+#menu{
+position: center;
+padding-top: 10%
+}
+
+#menu a:link {
+color: #ffffff;
+}
+#menu a:visited {
+color: #ffffff;
+}
+#menu a:hover { 
+ color: #24B0BF;
+} 
+
+#menu img{
+float:right;
+padding-right: 15%;
+}
+
+#timeline{
+	margin: 50px;
+	}
+
+
+
+#takeaway{
+	margin-left: 30px;
+	float: left;
+	}
+
+#curriculumquote{
+	position: relative;
+	}
+	
+#ipadtablet{
+	background-image: url('ipadapp.png');
+	height: 60%;
+	width: 100%;
+	float: left;
+	}

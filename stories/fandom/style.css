@@ -1,0 +1,340 @@
+body {
+	background-color: rgba(167, 175, 173, .7);
+}
+/*
+h1 {
+	font-family: "cubano";
+	color: #D60018;
+	font-size: 6.5em;
+	padding: 0;
+	margin-bottom: 0px;
+	text-shadow: #000000 .01em .01em 0, #000000 .02em .02em 0, #000000 .03em .03em 0, #000000 .04em .04em 0, #000000 .05em .05em 0, #000000 .06em .06em 0, #000000 .07em .07em 0, #000000 .08em .08em 0, #000000 .09em .09em 0, #000000 .1em .1em 0;
+}
+*/
+
+h2 {
+	font-family: "ff-tisa-web-pro";
+	color: #0A4D85;
+	font-weight: 400;
+	font-size: 1.8em;
+	line-height: 1.4em;
+	margin-top: 0px;
+}
+
+
+h3 {
+	font-family: "cubano";
+	color: #000000;
+	font-size: 3em;
+	line-height: 1em;
+	margin-bottom: 0px;
+}
+
+h4 {
+	font-family: "ff-tisa-web-pro";
+	color: #000000;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+h5 {
+	font-family: "ff-tisa-web-pro";
+	color: #0A4D85;
+	font-weight: 700;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin-right: 5%;
+}
+
+/* unvisited link */
+a:link {
+	color:#0A4D85;
+}      
+
+/* visited link */
+a:visited {
+	color:#D60018;
+} 
+
+/* mouse over link */
+a:hover {
+	color:black;
+} 
+
+/* selected link */ 
+a:active {
+	color:#FAFCF8;
+}  
+
+p.introduction:first-letter {
+	font-family: "cubano";
+	color: #D60018;
+	font-size: 2em;
+	line-height: 1em;
+	margin-bottom: 0px;
+}
+
+.caption {
+	font-family: "ff-tisa-web-pro";
+	color: #000000;
+	font-size: .8em;
+	line-height: 1em;
+	padding-top: 1%;
+}
+
+#captionbox {
+	float: left;
+}
+
+.navtext {
+	font-family: "cubano";
+	color: #FAFCF8;
+	font-size: 2em;
+	line-height: 1em;
+	margin-top: 1.5%;
+	margin-bottom: 1.5%;
+}
+
+#wrapper{
+	margin: 3% 0 0 0;
+}
+
+#toppic{
+	width:90%;
+	padding-bottom: 5%;
+	float: center;
+}
+
+#navbar{
+	position: absolute;
+	background-color: black;
+	padding: 1%;
+	margin:0%;
+}
+
+#navbar.affix {
+	position: fixed;
+	top: 70px;
+}
+
+#navbar a img:hover{
+	border: 2px solid #FAFCF8;
+}
+
+#navbar a.active img{
+	border: 2px solid green;
+}
+
+.imgnav{
+	width: 90%;
+	border: 2px solid black;
+	margin-top: 5%;
+	margin-bottom: 1%;
+}
+
+#headline{
+	float: left;
+}
+
+#supernatural{
+	float: left;
+}
+
+.colorblock{
+	width: 100%;
+	background-color: #0A4D84;
+	clear:both;
+}
+
+.inside{
+	width: 70%;
+	border-right: 5px solid;
+	border-right-color: #FAFCF8;
+	border-left: 5px solid;
+	border-left-color: #FAFCF8;
+	clear:both;
+}
+
+.sidebartext{
+	font-family: "jaf-facitweb";
+	color: #000000;
+	font-size: 1em;
+	line-height: 1.3em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#graf{
+	padding: 0 7% 5% 7%;
+}
+
+.intro{
+	font-family: "ff-tisa-web-pro";
+	font-style:italic;
+	font-weight: 700;
+	color: #000000;
+	font-size: 2em;
+	line-height: 1.5em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.article {
+	padding: 5% 0 5% 0;
+    float: left;
+    font-family: "jaf-facitweb";
+	color: #000000;
+	font-weight: 400;
+	line-height: 1.5em;
+	margin-top: 0px;
+}
+
+.sidebar{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.pad{
+	padding-left: 10%;
+}
+
+.char{
+	cursor: pointer;
+}
+
+#vocab, #infobox, #gallery-display{
+	background-color: #F6CB74;
+	border-right: 5px solid;
+	border-right-color: #FAFCF8;
+	border-left: 5px solid;
+	border-left-color: #FAFCF8;
+	border-top: 5px solid;
+	border-top-color: #FAFCF8;
+	border-bottom: 5px solid;
+	border-bottom-color: #FAFCF8;
+	padding-right: 2%;
+}
+
+#gallery-display{
+	padding-bottom:2%;
+}
+
+#outsideinfobox{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.gooutside{
+	margin-top: 1%;
+	float:left;
+}
+#lineup{
+	margin-bottom: -30%;
+}
+
+#Sue{
+	position:relative;
+ 	left:-7%;
+	z-index:1;
+}
+#Voldemort{
+	position:relative;
+	left: -10%;
+	z-index:4;
+}
+#Disney{
+	z-index:2;
+}
+#Regina{
+	position:relative;
+	left:-13%;
+	z-index:3;
+}
+#BuffyvsEdward{
+	position:relative;
+	top:-200px; 
+	left: 500px; 
+	z-index:5;
+}
+#Garfield{
+	position:relative;
+	top: -40px; 
+	left: -30%; 
+	z-index:7;
+}
+#BAMFgirls{
+	position:relative;
+	top:-250px; 
+	left: 40%; 
+	z-index:8;
+}
+#Sheldon{
+	position:relative;
+	top: -250px;
+	left: -24.5%;
+	z-index:6;
+}
+
+
+#info1, #info2, #info3, #info4, #info5, #info6, 
+#info7, #info8{ 
+	display: none; 
+}
+
+.information{
+	padding: 2% 5% 5% 5%;
+}
+
+#captions {
+	height: 5.859375%;
+    border-radius: 5px;
+    float:left;
+}
+	
+#caption2, #caption3, #caption4, #caption5, #caption6, #caption7, #caption8, #caption9, #caption10 { 
+	display: none; 
+}
+
+#picture {
+	padding-left: 2%;
+	padding-right:0;
+	margin-right:0;
+}
+
+#next {
+	width: 0; 
+	height: 0; 
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-left: 25px solid #f2e3d3;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+#prev {
+	width: 0; 
+	height: 0; 
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent; 
+	border-right: 25px solid #f2e3d3;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+            
+}
+
+.arrowleft{
+	float: left;
+	margin-left: 5%;
+}
+
+.arrowright{
+	float:right;
+}
+
+#infographic{
+	width:70%;
+}

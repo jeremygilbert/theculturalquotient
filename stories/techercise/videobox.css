@@ -1,0 +1,80 @@
+/* ----------------------------------------------------------------- */
+/* videobox css                                                      */
+/* http://www.pupinc.com/videobox/                                   */
+/* ----------------------------------------------------------------- */
+
+div.videobox {
+	padding: 10px 0 10px 10px;
+	float: left;
+	width: 35%;
+	background-color: #fff;
+	overflow: hidden;
+	margin-bottom: 2em;
+	color: black;
+}
+
+div.videoText {
+	font-family: PT Sans;
+	width: 30%;
+	float:left;
+	margin-top: -500px;
+	margin-left: 38%;
+	font-size: 1.3em;
+}
+
+div.videoboxjs div.bigvideo {
+	text-align: left;
+	width: 35%;
+	margin: 0 10px 10px 0;
+	padding: 0;
+}
+
+div.videoboxjs div.bigvideo br {
+	display: none;
+}
+
+div.videoboxjs ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+div.videoboxjs ul li {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+div.videoboxjs ul a {
+	display: block;
+	outline: none;
+}
+
+div.videoboxjs ul a img {
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+
+div.videoboxjs ul a:hover img {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+div.videoboxjs ul a.current img {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+div.videoboxjs ul a img {
+	border: 2px solid #00bff3;
+	display: block;
+	width: 101px;
+	height: 75px;
+}
+
+div.videoboxjs ul a.current img {
+	border-color: #f02e01;
+}
+
+div.videoboxjs p {
+	clear: both;
+}

@@ -1,0 +1,344 @@
+body {
+	background-color: rgb(177,177,177);
+	color: black;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 2.2em;
+	margin: 0;
+	padding: 0;
+	line-height: 140%
+	text-align: right;
+}
+body .nav li {
+	font-size: .85em;
+	letter-spacing: -0.005em;
+}
+.navbar-fixed-top {
+	top:0;
+	position:fixed;
+	right:0;
+	left:0;
+	z-index:1030;
+	margin-bottom:0;
+}
+.container {
+	display: block;
+}
+.navbar-fixed-bottom {
+	position:fixed;
+	right:0;
+	left:0;
+	z-index:1030;
+	margin-bottom:0;
+}
+.navbar {
+	overflow:visible;
+	margin-bottom:20px;
+	z-index: 1030;
+}
+
+#title {
+	height: 60%;
+	width: 100%; 
+}
+
+a#top {
+	color:black;
+	font-style:none;
+}
+a:visited {
+	color:black;
+	font-weight:bold;
+}
+a:hover {
+	color:white;
+	font-style:none;
+}
+
+#intro {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 2.5em;
+	color: rgb(53,53,53);
+	line-height: 1.4em;
+	background-color:rgb(170,170,170);
+	height: 350px;
+	text-align: center; 
+	width: auto;
+
+}
+
+
+#mekky {
+	width:800px;
+	padding-left: 180px;
+	margin:10px auto;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+	font-size: 1.4em;
+
+
+
+}	
+#what {
+	width:800px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+	font-size: 1.4em;
+	padding-left: 180px;
+
+
+}
+.graf {
+	width:800px;
+	padding:10px;
+	margin:10px auto;
+	line-height:140%;
+}
+h1 {
+	font-size:2em;
+	text-align:right;
+	font-family: 'Monoton', cursive;
+	color:white;
+}
+
+#header {
+	background-color: rgb(177,177,177);
+	padding:0px 0px 0px 0px;
+	height:650px;
+	position:relative;
+	background-size:cover;
+	color:rgb(119,158,177);
+	background-position:top;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+	background-image:url('subtitlesedit.jpg');
+
+}
+
+#culture {
+	width:800px;
+	padding-left: 180px;
+	margin:10px auto;
+	font-weight:normal;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+	font-size: 1.4em;
+
+
+
+}
+
+
+
+#psychology {
+	width:800px;
+	padding-left: 180px;
+	margin:10px auto;
+	font-weight:normal;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+	font-size: 1.4em;
+
+
+}
+
+#ours {
+	float:left;
+	padding:70px 0px 0px 0px;
+}
+#newone {
+	padding-bottom:24.25%;
+	height:0;
+	float:right;
+	position:relative;
+	width:40%;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+
+}
+ul {
+	font-size: .85em;
+}
+#newone {
+	float:right;
+	position:relative;
+	padding:10px 0px 0px 0px;
+	clear:right;
+	padding-bottom:24.25%;
+	height:0;
+	width: 40%;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+
+}
+#newone object{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+
+}
+
+#info{
+	z-index: -10;
+	text-align: right;
+	position: relative;
+	padding-top:-30px;
+	padding-left: 180px;
+	padding-bottom: 50px;
+
+}
+
+#vimeodiv {
+	position:relative;
+	background-color:none;
+	clear:right;
+	margin: 10px auto; 
+	float:right;
+	margin-top: 40px;
+	margin-bottom:40px;
+	height:450px;
+	width: 800px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+#vimeodiv iframe{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.caption {
+	font-style:italic;
+	font-size:0.85em;
+	color:white;
+	padding:5px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+
+}
+
+#quote {
+	font-size: 1.3em; 
+	color: rgb(100,0,0);
+	line-height:1.3em;
+	text-shadow:2px 2px rgb(25,76,101);
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.pullquote{
+	width: 30%;
+	float: right;
+	padding: 7px 7px 7px 10px;
+}
+
+#navi {
+	background-color: white;
+	color: rgb(25,76,101);
+	float:left;
+	clear:left;
+	text-align:center;
+	padding:10px;
+	border: none;
+	position:relative;
+	font-size:1.1em;
+	width: 120px;
+	line-height: 140%;
+	font-family: 'Open Sans Condensed', sans-serif;
+	z-index: 1030;
+}
+
+
+#Psych {
+	background-image:url('subtitlesedit2.jpg');
+	height:600px;
+	background-size: cover;
+	background-position:top;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+}
+#Culturo {
+		background-image:url('subtitlesedit3.jpg');
+		height:600px;
+		background-size: cover;
+		background-position:top;
+		font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+#myCarousel {
+	width:100%;
+	margin:10px auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#parallax1 {
+	background-image:url('subtitlesedit4.jpg');
+	height:600px;
+	background-size:cover;
+	background-position:top;
+
+
+}
+
+#game {
+	width:80%;
+	padding:10px;
+	margin:2% auto;
+	margin-left: 10%;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(53,53,53);
+
+
+}	
+
+#gameblock {
+	text-align: center;
+	width:60%;
+	padding:10px;
+	margin:10px auto;
+	color: rgb(53,53,53);
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+	body {padding:0;margin:0;}
+
+/*Class Nav*/
+#nav {background-color:#1b1b1b;width:100%;position:fixed;top:0px;font-weight:normal;font-size:1em;padding: 10px 20px 10px;overflow:auto;}
+#nav:after{clear:both;}
+#centered{padding: 0 10%;}
+#navigation{list-style-type:none;}
+#nav ul{float:left;margin:0;padding:0;}
+#nav ul li {display:inline; padding:10px;color:#999;}
+#nav a.title{font-size:1.25em;margin:3px 20px 0 0;}
+#nav a{text-decoration:none;color:rgba(155,155,155,1);line-height:1.25em;}
+#nav a:hover {color:rgba(255,255,255,1);}
+#nav a,#nav ul li {float:left;display:block;width:auto;font-size:0.875em;}
+
+#spacer {width:100%; height:1px;margin-top:60px;}
+@media all and (max-width:1024px) {
+	#spacer {margin-top:80px;}
+}
+@media all and (max-width:769px) {
+	#spacer {margin-top:120px;}
+}
+
+#footer {padding: 35px 25px;background-color: #ececec;}
+#footer ul.nav {float: none;overflow: visible; clear: both;padding: 15px 0;}
+#footer ul.nav li{position: relative;left: 0;display: block;float: left;margin: 0 10px 0 0;}
+#footer ul.nav>li{float: left;}
+#footer ul.nav>li>a{float: none;padding: 10px 15px 10px;color: #777777;text-decoration: none;text-shadow: 0 1px 0 #ffffff;}
+#footer ul.nav .title {font-size: 1.25em;margin: 3px 20px 0 0;}
+object.hidden {
+	visibility:hidden;
+	height:0px;
+	width:0px;
+}
+#line {
+	width:60%;
+	margin:10px auto;
+}
+//Stuff from bootstrap file

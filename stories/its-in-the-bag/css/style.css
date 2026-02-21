@@ -1,0 +1,338 @@
+@font-face {
+	font-family: Nexa Slab Bold;
+	src: url("Nexa Slab Bold.otf");
+}
+
+@font-face {
+	font-family: Akzidenz;
+	src: url("Berthold Akzidenz Grotesk BE Light.ttf");
+}
+
+body {
+	margin: 0px 0px;
+	font-size: 1.4em;
+	line-height: 1.25em;
+	padding: 0px 0px;
+}
+
+p + p, div + p {
+	margin-top: 1.5em;
+}
+
+#navigation li.active a {
+	color: white;
+}
+
+/*THIS IS FROM THE CLASS CSS*/
+/*Class Nav*/
+#nav {background-color:#1b1b1b;width:100%;position:fixed;top:0px;font-family:Akzidenz;font-weight:normal;font-size:1em;padding: 10px 20px 10px;overflow:auto;}
+#nav:after{clear:both;}
+#centered{padding: 0 10%;}
+#navigation{list-style-type:none;}
+#nav ul{float:left;margin:0;padding:0;}
+#nav ul li {display:inline; padding:10px;color:#999;}
+#nav a.title{font-size:1.25em;margin:3px 20px 0 0;}
+#nav a{text-decoration:none;color:rgba(155,155,155,1);line-height:1.25em;}
+#nav a:hover {color:rgba(255,255,255,1);}
+#nav a,#nav ul li {float:left;display:block;width:auto;font-size:0.875em;}
+
+#spacer {width:100%; height:1px;margin-top:60px;}
+@media all and (max-width:1024px) {
+	#spacer {margin-top:80px;}
+}
+@media all and (max-width:769px) {
+	#spacer {margin-top:120px;}
+}
+/*END STUFF FROM CLASS CSS*/
+
+/*TYPEKIT SPECIFICATIONS*/
+body,input,button,select,textarea,.navbar-search .search-query,.serif {
+	font-family: "freight-sans-pro",sans-serif;
+	font-weight: 400;
+}
+h1,.brand,.slab-serif {
+	font-family: "jubilat",sans-serif;
+}
+h2,h3,h4,h5,h6,li,.sans-serif {
+	font-family: "freight-sans-pro",sans-serif;
+	font-weight: 500;
+}
+/*END TYPEKIT SPECIFICATIONS*/
+
+div#nav-container {
+	position: fixed;
+	margin-top: 22%;
+	width: 300px;
+	height: 224px;
+	margin-left: -150px;
+	overflow: visible;
+	z-index: 999;
+}
+
+img#navBag {
+	height: 224px;
+	width: 300px;
+	overflow: visible;
+}
+
+div.nav1 {
+	height: 224px;
+	width: 150px;
+	margin-top: -200px;
+	margin-left: -100px;
+	padding-left: 20px;
+	position: relative;
+	text-align: center;
+}
+
+div.nav1 a {
+	font-size: .75em;
+	color: rgba(46,28,13,0.8);
+	font-family: Akzidenz;
+}
+
+div.nav1 span {
+	font-family: Akzidenz;
+	font-weight: 900;
+	text-shadow: 0px 0px 2px gray;
+	text-transform: uppercase;
+}
+
+a {
+	color: rgb(45,208,255);
+}
+
+a:visited {
+	color: rgb(40,66,32);
+}
+
+a.no-decoration {
+	text-decoration: none;
+	color: black; /*SUBJECT TO CHANGE*/
+}
+
+div.headline {
+	padding: 18% 0%;
+	background-image: url('intro2.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0% 0%;
+	box-shadow: 1px 1px 10px black inset;
+	border: none;
+}
+
+div.headline img {
+	margin: -5% auto 0% auto;
+}
+
+div.headline p {
+	font-family: Akzidenz;
+	font-size: 0.8em;
+	text-align: center;
+	text-shadow: 0px 0px 5px black;
+	color: white;
+	width: 401px;
+	margin: 0px auto;
+}
+
+div.section2 img, div.section3 img, div.section4 img {
+	margin: 0% auto;
+}
+
+div.testytest {
+	height: 50px;
+	backgroung-color: blue;
+}
+
+img {
+	display: block;
+}
+
+div.triangle {
+	margin: -10% auto 0% auto;
+	width: 100px;
+	z-index: 99;
+}
+
+div.triangle2 {
+	margin: -50px auto 0px auto;
+	width: 100px;
+	z-index: 99;
+}
+
+div.white-box {
+	background-color: #fff;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	box-shadow: 0px 0px 10px black;
+}
+
+div.blue-box {
+	background-color: rgba(45, 208, 255, 0.85);
+	padding: 60px 0px;
+	box-shadow: 0px 0px 10px gray;
+}
+
+div.texture-box {
+	background-image: url("005-subtle-light-patterns.jpg");
+	padding: 60px 0px;
+	box-shadow: 0px 0px 10px gray;
+}
+
+div.narrow {
+	width: 50%;
+	margin: 0px auto;
+	display: block;
+}
+
+p.intro {
+	font-size:1.5em;
+	line-height: 1.75em;
+	font-weight: bold;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 30%;
+	padding-top: 25px;
+	height: 0;
+	z-index: 0;
+	box-shadow: 0px 0px 10px black;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+div.pock-texture {
+	background-image: url("007-subtle-light-patterns.jpg");
+	padding-bottom: 5%;
+}
+
+div.vid-caption {
+	width: 50%;
+	color: gray;
+	text-align: center;
+	margin: 0px auto;
+	padding-top: 20px;
+}
+
+.center-buttons {
+	width: 615px;
+	margin: 0px auto 10px auto;
+}
+
+.center-buttons img {
+	display: inline;
+	margin: 0;
+}
+
+p.center-instructions {
+	text-align: center;
+	font-family: Nexa Slab Bold;
+	font-size: 1.5em;
+	margin-bottom: 60px;
+}
+
+div.section1 {
+	box-shadow: 1px 1px 10px black inset;
+	border: none;
+}
+
+div.section2 {
+	padding: 20% 0%;
+	background-image: url('threebags.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0% 0%;
+	box-shadow: 1px 1px 10px black inset;
+	border: none;
+}
+
+div.section3 {
+	padding: 20% 0%;
+	background-image: url('policy.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0% 0%;
+	box-shadow: 1px 1px 10px black inset;
+	border: none;
+}
+
+div.text-wrap-graph {
+	float: left;
+	margin: 60px 60px 60px 0px;
+	width: 500px;
+}
+
+.center-graph-title {
+	text-align: center;
+	font-family: Nexa Slab Bold;
+	font-size: 1em;
+}
+
+p.graph-captions {
+	width: 475px;
+	padding-left: 15px;
+	color: gray;
+	font-size: 0.85em;
+}
+
+div.section4 {
+	padding: 20% 0%;
+	background-image: url('community.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0% 0%;
+	box-shadow: 1px 1px 10px black inset;
+	border: none;
+}
+
+span.highlight {
+	background: rgb(97,235,0);
+	text-decoration: underline;
+}
+
+p.sound-captions {
+	width: 300px;
+	color: gray;
+	font-size: 0.85em;
+	clear: both;
+	float: right;
+	margin: 0px auto;
+}
+
+p.firstpar {
+	font-weight: bold;
+}
+
+aside.sound-right {
+	clear: both;
+	float: right;
+	width: 305px;
+	margin-right: 50px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+div#cp_container_1, div#cp_container_2 {
+	width: 104px;
+	margin: 0px auto;
+}
+
+div.sound-box-right {
+	padding-left: 40px;
+	width: 80%;
+}
+
+/*THIS IS FROM THE CLASS CSS*/
+#footer {padding: 35px 25px;background-color: #ececec;}
+#footer ul.nav {float: none;overflow: visible; clear: both;padding: 15px 0;}
+#footer ul.nav li{position: relative;left: 0;display: block;float: left;margin: 0 10px 0 0;}
+#footer ul.nav>li{float: left;}
+#footer ul.nav>li>a{float: none;padding: 10px 15px 10px;color: #777777;text-decoration: none;text-shadow: 0 1px 0 #ffffff;}
+#footer ul.nav .title {font-size: 1.25em;margin: 3px 20px 0 0;}

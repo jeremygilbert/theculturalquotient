@@ -1,0 +1,28 @@
+body {padding:0;margin:0;}
+
+/*Class Nav*/
+#nav {background-color:#1b1b1b;width:100%;position:fixed;top:0px;font-weight:normal;font-size:1em;padding: 10px 20px 10px;overflow:auto;}
+#nav:after{clear:both;}
+#centered{padding: 0 10%;}
+#navigation{list-style-type:none;}
+#nav ul{float:left;margin:0;padding:0;}
+#nav ul li {display:inline; padding:10px;color:#999;}
+#nav a.title{font-size:1.25em;margin:3px 20px 0 0;}
+#nav a{text-decoration:none;color:rgba(155,155,155,1);line-height:1.25em;}
+#nav a:hover {color:rgba(255,255,255,1);}
+#nav a,#nav ul li {float:left;display:block;width:auto;font-size:0.875em;}
+
+#spacer {width:100%; height:1px;margin-top:60px;}
+@media all and (max-width:1024px) {
+	#spacer {margin-top:80px;}
+}
+@media all and (max-width:769px) {
+	#spacer {margin-top:120px;}
+}
+
+#footer {padding: 35px 25px;background-color: #ececec;}
+#footer ul.nav {float: none;overflow: visible; clear: both;padding: 15px 0;}
+#footer ul.nav li{position: relative;left: 0;display: block;float: left;margin: 0 10px 0 0;}
+#footer ul.nav>li{float: left;}
+#footer ul.nav>li>a{float: none;padding: 10px 15px 10px;color: #777777;text-decoration: none;text-shadow: 0 1px 0 #ffffff;}
+#footer ul.nav .title {font-size: 1.25em;margin: 3px 20px 0 0;}

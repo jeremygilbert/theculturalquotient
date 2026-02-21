@@ -1,0 +1,203 @@
+body {
+	background-color: rgb(25,76,101);
+	color: #353535;
+	font-family:"pt-sans",sans-serif;
+	font-size: 2em;
+	line-height: 140%
+}
+.navbar-fixed-top {
+	top:0;
+	position:fixed;
+	right:0;
+	left:0;
+	z-index:1030;
+	margin-bottom:0;
+}
+.container {
+	display: block;
+}
+.navbar-fixed-bottom {
+	position:fixed;
+	right:0;
+	left:0;
+	z-index:1030;
+	margin-bottom:0;
+}
+.navbar {
+	overflow:visible;
+	margin-bottom:20px;
+}
+
+#title {
+	height: 60%;
+	width: 95%; 
+}
+
+a#top {
+	color: white;
+	font-style:none;
+}
+a:visited {
+	color: white;
+	font-weight:bold;
+}
+a:hover {
+	color: white;
+	font-style:none;
+}
+
+#intro {
+	background-color:rgb(25,76,101);
+	height: 100px; 
+	width: 100%;
+	padding: 2%;
+	font-size: 1.3em;
+	text-align: center;
+	line-height:1.1em;
+}
+
+#mekky {
+	width:60%;
+	padding:10px;
+	margin:10px auto;
+}	
+#what {
+	width:60%;
+	padding:10px;
+	margin:10px auto;
+}
+.graf {
+	width:60%;
+	padding:10px;
+	margin:10px auto;
+	line-height:140%;
+}
+h1 {
+	font-size:4em;
+	text-align:right;
+	font-family:"cubano",sans-serif;
+	color:rgb(100,0,0);
+}
+#header {
+	background-image:url('subtitlesedit.jpg');
+	padding:0px 0px 0px 0px;
+	height:650px;
+	position:relative;
+	background-size:cover;
+	color:rgb(100,0,0);
+	background-position:top;
+}
+#culture {
+	width:60%;
+	padding:10px;
+	margin:10px auto;
+	font-weight:normal;
+}
+
+#ours {
+	float:left;
+	padding:35px 0px 0px 0px;
+}
+#newone {
+	padding-bottom:24.25%;
+	height:0;
+	float:right;
+	position:relative;
+	width:40%;
+}
+ul {
+	font-size: .85em;
+}
+#newone {
+	float:right;
+	position:relative;
+	padding:10px 0px 0px 0px;
+	clear:right;
+	padding-bottom:24.25%;
+	height:0;
+	width: 40%;
+}
+#newone object{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+#vimeodiv {
+	position:relative;
+	background-color:rgb(25,76,101);
+	clear:right;
+	margin: 10px auto; 
+	float:right;
+	padding-top:24.25%;
+	height:250px;
+	width: 60%;
+}
+#vimeodiv iframe{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.caption {
+	font-style:italic;
+	font-size:0.85em;
+	color:white;
+	padding:5px;
+}
+
+#quote {
+	font-size: 2.5em; 
+	color: rgb(100,0,0);
+	line-height:1.3em;
+	text-shadow:2px 2px black;
+}
+
+#navi {
+	background-color:rgb(25,76,101);
+	color: white;
+	float:left;
+	clear:left;
+	text-align:center;
+	padding:10px;
+	border:white solid 3px;
+	position:relative;
+	font-size:1.1em;
+}
+
+
+#Psych {
+	background-image:url('subtitlesedit2.jpg');
+	height:600px;
+	background-size: cover;
+	background-position:top;
+}
+#Culturo {
+		background-image:url('subtitlesedit3.jpg');
+		height:600px;
+		background-size: cover;
+		background-position:top;
+}
+#parallax1 {
+	background-image:url('subtitlesedit4.jpg');
+	height:600px;
+	background-size:cover
+}
+
+#game {
+	width:80%;
+	padding:10px;
+	margin:2% auto;
+	margin-left: 10%;
+}	
+
+#gameblock {
+	width:60%;
+	padding:10px;
+	margin:10px auto;
+	text-align: center;
+}	
+
+//Stuff from bootstrap file

@@ -1,0 +1,444 @@
+body{
+	background-color: #434345;
+	position: relative;
+	}
+
+.headlines {
+	font-family: 'Amatic Sc', cursive;
+	font-size: 90px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	margin-top: 0
+}
+
+
+.headlines2 {
+	font-family: 'Amatic Sc', cursive;
+	font-size: 90px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	margin-top: 0
+}
+
+
+.barheader {
+  height: 3em;
+  background: #434345;
+  width: 100%;
+  float:left;
+  margin-bottom: 2em;
+}
+
+.bar {
+  height: 9em;
+  background: #24B0BF;
+  width: 100%;
+  float:left;
+  margin-bottom: 2em;
+}
+
+.bar1 {
+  height: 9em;
+  background: #8dc63f;
+  width: 100%;
+  float:left;
+  margin-bottom: 2em;
+}
+
+.bar2 {
+  height: 9em;
+  background: #8dc63f;
+  width: 100%;
+  float:left;
+  margin-bottom: 2em;
+}
+
+.bar3 {
+  height: 9em;
+  background: #F7AB3E;
+  width: 100%;
+  float:left;
+  margin-bottom: 2em;
+}
+
+.bar4 {
+  height: 9em;
+  background: #F25757;
+  width: 100%;
+  float:left;
+  margin-bottom: 2em;
+}
+
+.bar5 {
+  height: 9em;
+  background: #D08FF2;
+  width: 100%;
+  float:left;
+  margin-bottom: 2em;
+}
+
+h3 {
+font-family: 'Roboto Slab', serif;
+color: white;
+font-weight: 300;
+text-align: center;
+}
+
+p.dek {
+font-family: 'Roboto Slab', serif;
+color: white;
+font-size: 42px;
+font-weight: 400;
+text-align: center;
+}
+
+p.introduction:first-letter {
+ font-size : 300%;
+ font-family: 'Roboto Slab', serif;
+ font-weight: 300;
+ color : white;
+ margin-top: -1em;
+ }
+
+div.dek {
+border-bottom: 8px solid #24B0BF;
+margin-bottom: 3em;
+}
+
+.headlines#technology{
+	font-family: 'Sintony', sans-serif;
+	font-size: 1.5em;
+	color: black;
+	}
+	
+.educationtech{
+font-family: 'Amatic Sc', cursive;
+	font-size: 80px;
+	text-align: center;
+	color: grey;
+	margin-top: 0px;
+}
+
+
+
+#takeaway {
+color: #F7AB3E;
+opacity: .9;
+float:left;
+}
+
+#tablet {
+color: white;
+opacity: .8;
+}
+
+
+/*Class Nav*/
+#classnav {
+	background-color:#434345;
+	width:100%;
+	position:fixed;
+	top:0px;
+	font-weight:normal;
+	font-size:1em;
+	padding: 10px 20px 10px;
+	font-family: 'Sintony', sans-serif;
+	line-height: 3em;
+	}
+#classnav:after{
+	clear:both;
+	}
+#centered{
+	padding: 0 10%;
+	}
+
+.audiocaption{
+	font-style: italic;
+	font-size: 11px;
+	}
+#classnavigation{
+	list-style-type:none;
+	}
+#classnav ul{
+	float:left;
+	margin:0;
+	padding:0;
+	}
+#classnav ul li {
+	display:inline; 
+	padding:10px;
+	color:#DFE5E3;
+	}
+#classnav a.title{
+	font-size:1.25em;
+	margin:3px 20px 0 0;
+	}
+#classnav a{
+	text-decoration:none;
+	color:rgba(155,155,155,1);
+	line-height:1.25em;
+	}
+#classnav a:hover {
+	color:rgba(255,255,255,1);
+	}
+#classnav a,#classnav ul li {
+	float:left;
+	display:block;
+	width:auto;
+	font-size:0.875em;
+	}
+
+#spacer {width:100%; height:1px;margin-top:60px;}
+@media all and (max-width:1024px) {
+	#spacer {margin-top:80px;}
+}
+@media all and (max-width:769px) {
+	#spacer {margin-top:120px;}
+}
+
+#footer {
+	padding: 10px 10px;
+	background-color: #434345;
+	font-family: 'Sintony', sans-serif;
+	font-size: .85em;
+	}
+#footer ul.classnav {
+	float: none;
+	overflow: visible; 
+	clear: both;
+	padding: 15px 0;
+	}
+#footer ul.classnav li{
+	position: relative;
+	left: 0;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+	}
+#footer ul.classnav>li{
+	float: left;
+	}
+#footer ul.classnav>li>a{
+	float: none;
+	padding: 10px 10px 10px;
+	color: #999;
+	text-decoration: none;
+	}
+#footer ul.classnav .title {
+	font-size: 1em;
+	margin: 3px 20px 0 0;}
+
+p.audiomargin {
+margin-left: 0px;
+}
+
+p{
+	font-family: 'Sintony', sans-serif;
+	font-size: 15px;
+	line-height: 1.75em;
+	color: white;
+	}
+.TLbox{
+	color: black;
+	}
+p.audiocaption {
+	font-size: 11px;
+	}
+#intro{
+font-size: 30px;
+font-family: 'Roboto Slab', serif;
+font-weight: 300;
+padding: 10 px;
+}
+	
+#font{
+	color: white;
+	}
+	
+
+
+.page-wrap{
+	width: 60%;
+	background-color: #434345;
+	padding: 10px;
+	margin: 0 auto;
+	padding-top: 0px;
+	}
+
+
+#instructions {
+	font-family: 'Sintony', sans-serif;
+	font-weight: bold;
+	color: grey;
+	}
+
+#credit{
+	float:right;
+	font-family: 'Sintony', sans-serif;
+	font-size: 15px;
+	color: white;
+	}
+
+
+p.indented
+{ 
+margin: 0px;
+padding: 0px;   
+text-indent: 10px; 
+} 
+
+p#ipadp{
+color: black;
+font-size: 12px;
+}	
+
+#infographic{
+	width: 100%;
+	float: left;
+	margin-top: 2em;
+	margin-bottom: 4em;
+	}
+	
+#navigation {
+display: block;
+margin-left: -2px;
+font-size: 19px;
+color: white;
+font-family: 'Amatic SC', cursive;
+position: fixed;
+left: 0;
+top: 40%;
+width: 200px;
+height: 256px;
+margin-top: -2.5em;
+background-image: url('ipadblank.png');
+background-repeat: no-repeat;
+background-position:center center;
+-moz-border-radius: 5px;
+border-radius: 15px;
+-moz-box-shadow: 5px 5px 5px black;
+-webkit-box-shadow: 5px 5px 5px black;
+box-shadow: 5px 5px 5px black;
+
+}
+
+#appshead{
+margin-bottom: 0px;
+}
+
+#navigation ul { 
+list-style-type: none; 
+padding-left: 15%;
+}
+
+#menu{
+position: center;
+padding-top: 10%
+}
+
+#menu a:link {
+text-decoration:none;
+color: #ffffff;
+}
+#menu a:visited {
+color: #ffffff;
+}
+#menu a:hover { 
+ color: #24B0BF;
+} 
+
+#menu img{
+float:right;
+padding-right: 15%;
+}
+
+#header {
+background-image: url('headerimage3.jpg');
+display:block;
+background-size:cover;
+height: 500px;
+width: 100%;
+background-repeat:no-repeat;
+float: left;
+}
+
+#banner{
+width: 100%;
+float: left;
+margin-bottom: 5%;
+background-image: url('headerimage3.jpg');
+background-attachment: fixed;
+background-size: cover;
+	}
+
+
+#pullquote1 {
+background-image: url('girl.png');
+height: 100%;
+width: 100%;
+float: left;
+background-attachment: fixed;
+}
+
+#pullquote2{
+background-image: url('pq2.jpg');
+height: 100%;
+width: 100%;
+float: left;
+background-attachment: fixed;
+}
+
+#pullquote3{
+background-image: url('pq3.jpg');
+height: 100%;
+width: 100%;
+float: left;
+background-attachment: fixed;
+}
+
+#pullquote4{
+background-image: url('pq4.jpg');
+height: 100%;
+width: 100%;
+background-attachment: fixed;
+float: left;
+}
+
+.quote{
+       margin: 0 auto;
+       clear: both;
+       width: 100%;
+       float: left;
+       }
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: auto;
+}
+
+.video iframe,
+.video object,
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+}
+
+.audio{
+margin-top: 1em;
+float:left;
+}
+
+#ipadtablet{
+	background-image: url('ipadapp.png');
+	height: 60%;
+	width: 100%;
+	float: left;
+	}
+

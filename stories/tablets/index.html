@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Child's Play</title>
+	  <meta charset="utf-8">
+  
+  <link rel="stylesheet" href="accordion.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+  <link rel="stylesheet" href="ipad.css">
+
+ <script src="glow.js"></script>
+	
+<!--FONTS-->
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<!--END FONTS-->
+
+<link rel="stylesheet" href="thirdstyle.css" type="text/css">
+
+<!---popup--> <link rel="stylesheet" href="magnific-popup.css"> 
+<!--test-->
+<link rel="stylesheet" href="smooth.css" />
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript">
+            $(function() {
+                $('#navigation').stop().animate({'marginLeft':'-150px'},1000);
+
+                $('#navigation').hover(
+                    function () {
+                        $($(this)).stop().animate({'marginLeft':'-0px'},200);
+                    },
+                    function () {
+                        $($(this)).stop().animate({'marginLeft':'-150px'},200);
+                    }
+                );
+            });
+        </script>
+<!--end test-->
+<script src="jquery.magnific-popup.js">	</script> 
+<script>
+$(document).ready(function() {
+  $('.image-popup-fit-width').magnificPopup({type:'image'});
+});
+	
+</script>
+<!---end popup-->
+
+<!--this is the scrollbar-->
+
+<style>
+.scroll-pane { 
+	overflow: auto; 
+	width: 99%; 
+	float:left; 
+	}
+.scroll-content { 
+	width: 2400px;
+	height: 400px;
+	float: left;
+	}
+.scroll-content-item { 
+	width: 100px; 
+	height: 100px; 
+	float: left; 
+	margin: 10px; 
+	font-size: 3em; 
+	line-height: 96px; 
+	text-align: center; 
+	}
+.scroll-bar-wrap { 
+	clear: left; 
+	padding: 0 4px 0 2px; 
+	margin: 0 -1px -1px -1px;
+	}
+.scroll-bar-wrap .ui-slider { 
+	background: none; 
+	height: 2em; 
+	margin: 0 auto;
+	}
+.scroll-bar-wrap .ui-handle-helper-parent { 
+	position: relative; 
+	width: 100%; 
+	height: 100%; 
+	margin: 0 auto; 
+	}
+.scroll-bar-wrap .ui-slider-handle { 
+	top:.2em; 
+	height: 1.5em; 
+	}
+.scroll-bar-wrap .ui-slider-handle .ui-icon { 
+	margin: -8px auto 0;
+	position: relative; 
+	top: 50%; 
+	}
+	
+#timeline{
+	width: 700px;
+	height: 300px;
+	}
+
+<!--this is the hover-->	
+li { color: black; }
+li:hover {color: #24B0BF;}
+li:hover {cursor: pointer;}
+<!--this ends the hover-->
+
+</style>
+<script>
+$(function() {
+//scrollpane parts
+var scrollPane = $( ".scroll-pane" ),
+scrollContent = $( ".scroll-content" );
+
+//build slider
+var scrollbar = $( ".scroll-bar" ).slider({
+slide: function( event, ui ) {
+if ( scrollContent.width() > scrollPane.width() ) {
+scrollContent.css( "margin-left", Math.round(
+ui.value / 100 * ( scrollPane.width() - scrollContent.width() )
+) + "px" );
+} else {
+scrollContent.css( "margin-left", 0 );
+}
+}
+});
+//append icon to handle
+var handleHelper = scrollbar.find( ".ui-slider-handle" )
+.mousedown(function() {
+scrollbar.width( handleHelper.width() );
+})
+.mouseup(function() {
+scrollbar.width( "50%" );
+})
+.append( "<span class='ui-icon ui-icon-grip-dotted-vertical'></span>" )
+.wrap( "<div class='ui-handle-helper-parent'></div>" ).parent();
+//change overflow to hidden now that slider handles the scrolling
+scrollPane.css( "overflow", "hidden" );
+//size scrollbar and handle proportionally to scroll distance
+function sizeScrollbar() {
+var remainder = scrollContent.width() - scrollPane.width();
+var proportion = remainder / scrollContent.width();
+var handleSize = scrollPane.width() - ( proportion * scrollPane.width() );
+scrollbar.find( ".ui-slider-handle" ).css({
+width: handleSize,
+"margin-left": -handleSize / 2
+});
+handleHelper.width( "" ).width( scrollbar.width() - handleSize );
+}
+//reset slider value based on scroll content position
+function resetValue() {
+var remainder = scrollPane.width() - scrollContent.width();
+var leftVal = scrollContent.css( "margin-left" ) === "auto" ? 0 :
+parseInt( scrollContent.css( "margin-left" ) );
+var percentage = Math.round( leftVal / remainder * 100 );
+scrollbar.slider( "value", percentage );
+}
+//if the slider is 100% and window gets larger, reveal content
+function reflowContent() {
+var showing = scrollContent.width() + parseInt( scrollContent.css( "margin-left" ), 10 );
+var gap = scrollPane.width() - showing;
+if ( gap > 0 ) {
+scrollContent.css( "margin-left", parseInt( scrollContent.css( "margin-left" ), 10 ) + gap );
+}
+}
+//change handle position on window resize
+$( window ).resize(function() {
+resetValue();
+sizeScrollbar();
+reflowContent();
+});
+//init scrollbar size
+setTimeout( sizeScrollbar, 5 );//safari wants a timeout
+});
+
+
+
+//switching the content out
+$(document).ready(function(){
+	$('#chalkboard').click(function(){
+	$('#one').show();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#lantern').click(function(){
+	$('#one').hide();
+	$('#three').show();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+$(document).ready(function(){
+	$('#stereoscope').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').show();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+$(document).ready(function(){
+	$('#filmProjector').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').show();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+$(document).ready(function(){
+	$('#radio').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').show();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#projector').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').show();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#mimeograph').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').show();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+
+$(document).ready(function(){
+	$('#headset').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').show();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+
+$(document).ready(function(){
+	$('#rule').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').show();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#skinner').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').show();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#television').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').show();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#filmstrip').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').show();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#filmstrip').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').show();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#scantron').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').show();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#computer').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').show();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#calculator').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').show();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+$(document).ready(function(){
+	$('#whiteboard').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').show();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#clicker').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').show();
+	$('#nineteen').hide();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#xo').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').show();
+	$('#twenty').hide();
+	});
+	});
+	
+$(document).ready(function(){
+	$('#ipad').click(function(){
+	$('#one').hide();
+	$('#three').hide();
+	$('#four').hide();
+	$('#five').hide();
+	$('#six').hide();
+	$('#seven').hide();
+	$('#eight').hide();
+	$('#nine').hide();
+	$('#ten').hide();
+	$('#eleven').hide();
+	$('#twelve').hide();
+	$('#thirteen').hide();
+	$('#fourteen').hide();
+	$('#fifteen').hide();
+	$('#sixteen').hide();
+	$('#seventeen').hide();
+	$('#eighteen').hide();
+	$('#nineteen').hide();
+	$('#twenty').show();
+	});
+	});
+</script>
+
+
+<!--this ends the scrollbar-->
+
+</head>
+<!----culture quotient header-->
+
+<!--CLASS NAV-->
+<div id="classnav" data-top-top="position:fixed; top: 0px;z-index:999;" data-0="position:static;" style="z-index: 1000;">
+<div id="centered">
+<a class="title" href="/">The Cultural Quotient</a>
+<ul id="classnavigation">
+<li><a href="../robotic-relations">Robots</a></li>
+          <li><a href="../madbarista">Coffee</a></li>
+          <li><a href="../its-in-the-bag">Bags</a></li>
+          <li><a href="../music">Music</a></li>
+          <li class="active"><a href="../tablets">Tablets</a></li>
+          <li><a href="../fandom">Superfans</a></li>
+          <li><a href="../techercise">Techercise</a></li>
+          <li><a href="../social-design">Social Design</a></li>
+</ul>
+</div>
+</div>
+<div id="spacer"></div>
+
+<!---end class nav-->
+<!--end header-->
+<body>
+
+<!--Header-->
+<div id="banner" data-stellar-background-ratio="0" style="background-position: 0px 0px;"><img src="childsplay.png" width="100%" height="50%"></img></div>
+<!--END HEADER-->
+<div class= "page-wrap">
+    <header>	
+        <div class="story" id="childsplay"><h3></h3></div>
+    </header><!--hangs over navigation and story-->
+	
+
+
+
+<div id="leftcontainer"><!--navigation column floats on left-->
+<div id="navigation">
+	<ul id="menu"><div id="font">
+<li class="intro"><a href="#intro">home <img src="home.png" height="23px" width="23px"></a>
+<li class="study"><a href="#study">study<img src="study.png" height="23px" width="23px"></a>
+<li class="beneficial"><a href="#interaction">benefits<img src="beneficial.png" height="23px" width="23px"></a>
+<li class="parental"><a href="#concerns">parental concerns<img src="parental.png" height="23px" width="23px"></a>
+<li class="curriculum"><a href="#curriculum">creating curriculum<img src="curriculum.png" height="23px" width="23px"></a>
+<li class="takeaway"><a href="#takeaway">takeaway<img src="takeaway.png" height="23px" width="23px"></a>
+<li class="tablet"><a href="#tablet">apps<img src="apps.png" height="23px" width="23px"></a>
+</div></ul>
+
+
+</div><!--END NAVIGATION-->
+
+</div><!--END LEFT CONTAINER-->
+
+   
+
+
+
+<div class="heading" id="intro"></div>
+<div class="dek"><div>
+<p class="dek">How the iPad is making its way into </br> the classroom</p></div>
+</div>
+<h3> by Annie Chang, Priya Krishnakumar, Lauren Schiappa & Hilary Sharp </h3>
+</br></br>
+    <div class="story"><p class = "indented">
+	<p class="introduction">As the students of Debbie Iantorno's first grade class file in, the sound of their excited whispers fills the science room. They are working with iPad minis today.</p>
+	<p class="indented"> In this lesson, the class is using the tablets to photograph chicken eggs that have been incubating for almost two weeks. The kids have been tracking their progress by writing their observations next to the picture. Instructions are brief-just a small review of what the icons mean. Once the children are left to their own devices, they are naturals. Snapping photos of the eggs, of each other, they create collages that reflect the classroom environment with little direction.</p>
+
+<p class="indented"><div class="audio">
+<iframe width="80%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F90945352&show_artwork=true"></iframe>
+<p class="audiocaption">
+Click to listen to a sample of Iantorno's iPad lesson
+<br>
+(Medill/Annie Chang)
+</p>
+</div><p class ="audiomargin">Iantorno's classroom at St. Athanasius is just one of many examples of the growing trend of iPad usage in schools, particularly with younger students. The school received 10 iPads and 20 iPad Minis after applying for a grant earlier in 2013. It has only had the new technology for a couple of weeks, and already Iantorno and her fellow teacher Shawna O'Gara see a difference in how the children learn.</p>
+
+<p class="indented">"It's something fun for them to do and they feel like it's a game, not necessarily like they are learning something," says O'Gara.
+</p>
+<!--AUDIO PIECE ON CLASSROOM--><p>
+
+</p>
+
+</div> </div>
+<div class="bar" id="study">
+<p class="headlines">The Study</p>
+	</div>
+<div class ="page-wrap">
+    <div class="story"><div id="study1"><p class="introduction">Courtney Blackwell, a second-year PhD student at Northwestern University, has been studying the effects of technology on children's learning. Her interest specifically in the use of iPads in schools bloomed as she saw increased integration of iPads in preschool and kindergarten programs. Blackwell monitored four different classrooms with varying levels of iPad use; two classrooms had a few iPads for the entire class while the others were 1:1 programs (one iPad per student). In all four classrooms, teachers welcomed the use of iPads with enthusiasm, she says.</p>
+
+<p class="indented">The numbers keep on growing. According to Blackwell, Apple sold 1.5 million iPads to K through 12 educational institutions. That number, she says, has tripled to 4.5 million.</p>
+
+<p class="indented">Bringing cutting-edge technology like iPads into the classroom is encouraged, especially at the administrative level, Blackwell says. Federal programs such as the Race to the Top and the Early Learning Challenge are sources of motivation and funding for teachers to incorporate the devices in their lessons. Schools can also receive grants from local foundations - this was the case with District U-46 in Elgin, Ill., which Blackwell has been studying for the past several months.</p>
+
+<p class="indented">Kristin Ziemke, a first grade teacher at Burley School, wrote a grant proposal in 2010 and received 30 iPads for her school. Groups of five or six students would share one iPad. The number of devices expanded in 2011, to the point where each child would receive to use his or her own iPad during a lesson.</p>
+
+<p class="indented">"We wanted to explore because it enhances inquiry and creativity in the classroom as well as provides resources for students to accommodate different types of thinking."
+</br></br><em><strong>Discover more about how iPads are integrated into the lives of children (click to expand)</em></strong></p></div>
+
+</div><!--end study div-->
+</div><!--END ??-->
+</div><!---END PAGE WRAP-->
+
+<!--INFOGRAPHIC-->
+<div id="infographic"><center> 
+<a class="image-popup-fit-width" href="infographic2.jpg" title="Information courtesy of Courtney Blackwell & the Chicago Public School District (Medill/Priya Krishnakumar).">
+	<img src="infographic.jpg" width="1038" height="500">
+</a>
+</center> </div>
+
+<!--Pull quote 1-->
+<div id="pullquote1" data-stellar-background-ratio="0" style="background-position: 0px 0px;">
+<img src="PQUOTE1.png" class="quote" width="100%">
+</div>
+
+<!--end pull quote 1-->
+
+<div class="bar2" id="interaction">
+<p class="headlines">Beneficial Interaction</p></div>
+
+<div class="page-wrap"><!--SECOND PAGE WRAP-->
+	<div class="story" style="clear: both;"><p class="introduction">
+		Why are these tablets becoming increasingly popular in classrooms? For one thing, Blackwell says, it is much easier for children to use.
+</p>
+<p class="indented">
+"It's cognitively simpler-you don't have to use the mouse," she explains. "You can avoid having to use motor skills." Not to mention it is compact, transportable and cheaper than computers.
+Jennifer Magiera, the Digital Learning Coordinator for a neighborhood of 25 Chicago Public Schools, successfully applied for a grant to bring iPads to the public school curriculum.</p>
+<p class="indented">
+"There's something about the kinesthetic quality of iPads that you can't get in traditional computer devices," says Magiera. Her students use screencasting apps that combine a digital whiteboard with narration and sound, so they can layer multimedia. According to Magiera, "it helps with opening up their cognitions, to see and hear what the student is thinking in real time."</p>
+<p class="indented">
+In a world that is constantly moving forward technologically, teachers place high importance on preparing kids for the permanence of iPads in daily life. In the opinion of Iantorno, it is inevitable.</p>
+<p class="indented">
+"They use them at home. Their mom and dads use them. They're going to be using them in high school. They're going to be using them in college. Their careers are going to have them. I know they're only six but you have to think that far ahead."</p>
+<p class="indented">
+However, there is a question, Blackwell says, of whether or not children are actually benefitting from this interaction. Previous research shows that until they are about 15 months old, children do not benefit from educational videos. </p>
+<p class="indented">
+The interactivity of the iPad may have the potential to fill this educational deficit. Students at St. Athansius use video to connect with students like themselves. They have pen pals in Brazil that they Skype every so often. Ziemke's students used iPads to investigate bats by sharing information with students at other schools. Classrooms participated in a virtual discussion with one another and "met" their research partners.
+
+		</p></div>
+</div><!--END SECOND PAGE WRAP-->
+<div id="pullquote2" data-stellar-background-ratio="0" style="background-position: 0px 0px;">
+	<img src="PQUOTE2.png" class="quote" width="100%"></div>
+	<div class="bar3" id="concerns"><p class="headlines">Parental Concerns</p></div>
+<div class="page-wrap"><!--THIRD PAGE WRAP-->
+	<div class="story" style="clear: both;"><p class="introduction">
+	While the iPad seems to have many benefits for children, parents still have qualms, particularly when technology can threaten the benefits of natural play. Rebecca Dunn, whose 5-year-old son will be entering kindergarten in the fall, is conflicted.</p>
+<p class="indented">
+"I definitely prefer hands-on learning and I don't feel like the iPad is necessarily hands-on-he's manipulating things but it's not the same as playing," Dunn says. "At the same time, I feel like he needs to know technology."</p>
+<p class="indented">
+Dunn's son mostly uses the iPad for entertainment purposes at home. His games of choice: Curious George and Cat in the Hat, which provide activities like matching and drawing. Dunn and her husband try to limit the amount of time their son spends in front of a screen. Despite limiting exposure, Dunn says her son's response to the iPad is sometimes concerning.</p>
+<p class="indented">
+"I notice the difference when we take it away," Dunn admits. "When it's time to turn off the iPad, there's a temper tantrum and that really bothers me. It's like he's obsessed with it and he can't get enough."</p>
+<p class="indented">
+Aileen Cruz, a mother of two girls who are 4 and 7, says she welcomes iPad assignments when the children bring them home, but prefers her children use other methods of finding information. For example, when they are trying to find a particular state, Cruz prefers her children looking it up on a physical map or in an encyclopedia. </br></br><em><strong>Watch the video to see how Cruz and her children interact with the iPad at home</em></strong></p>
+    
+
+
+    <div id="rightparent"><!--video without text--><center>
+	<div class="video">
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/4qnSZK4hdFA" frameborder="0" allowfullscreen></iframe></center></div>
+    </div><!--end rightparent-->
+<div id="credit">(Medill/Annie Chang)</div>
+</div>
+<div id = "pullquote3" data-stellar-background-ratio="0" style="background-position: 0px 0px;">
+<img src="PQUOTE3.png" class="quote"></div>
+	</div><!--end parent story--></div><!---to fix the ps-->
+	
+<div class="bar4" id="curriculum"><p class="headlines">Creating Curriculum</div>
+
+<div class="page-wrap"><!--BEGIN FOURTH PAGE WRAP-->
+
+    <div class="story" style="clear: both;"><p class="introduction">
+	Because the idea of educational iPad programming is relatively new, it is difficult to say whether or not it makes a difference in how children learn. Magiera believes this uncertainty can deter teachers from stepping into the 21st century and implementing iPad programs in their own schools. No one wants to gamble with the minds of children, but Magiera says that learning from mistakes is incredibly important, especially when introducing new forms of learning.</p>
+<p class="indented">
+"I think a lot of teachers are afraid to try," Magiera says. "It's actually more powerful when you try something that doesn't work. Then you make it better."
+</p><p class="indented">
+The key is to adapt the curriculum to the device. As the nature of educational tools changes, so too must the nature of the curriculum. According to Magiera, teachers must ask themselves a very important question: Am I teaching this curriculum because I want to teach it or am I teaching it because I want my students to be better?
+</p><p class="indented">
+The problem is the amount of time it takes teachers to sift through and test the hundreds of thousands of educational apps floating around cyberspace. That's where new companies like eSpark come in. Founded in 2010 by David Vinca, eSpark helps schools effectively implement iPad-based programs.</p>
+
+<!---audio piece--->
+<div class="audio">
+<iframe width="80%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F90949222"></iframe>
+<p class="audiocaption">
+Listen to Russom talk about iPad apps and their
+<br>
+place in young education curriculum.
+<br>
+(Medill/Hilary Sharp)
+</p>
+</div>
+<!---end audio-->
+<p class="indented">
+Jonathan Russom, eSpark's Partnership Delivery Manager, trains students and teachers to use the eSpark platform. Based on the apps they have carefully tested, rated and chosen, eSpark provides pre-lesson and post-lesson evaluations that teachers can use to track individual students' progress. It cuts down on the amount of resources schools need to accomplish that themselves.
+</p><p class="indented">
+"Districts don't have a person who can devote enough time to downloading these 100,000 educational apps and actually playing them and aligning them to curricular standards in a way that would be accessible to teachers. We do that. We've aligned them to the common course state standards."
+</p><p class="indented">
+Currently, eSpark offers curriculum for math and reading, but not science and social studies. The problem, Russom says, is that developers have not created apps for those subjects that are as effective. The same problem occurs when looking at apps for any grade levels past the eighth grade. Effective learning content just has not been developed for older students.
+
+	</p>
+</div><!--END STORY-->
+
+	
+
+
+<div class="educationtech" id="technologyhead">Educational Technology Through the Years</div>
+<p class="indented">
+<div id="instructions">Scroll through the timeline and click on each year to see how technology has
+ affected classroom education.</p></div>
+<center>
+<!--TIME LINE-->
+<div class="timelinebox">
+<div class="container" id="timeline" id="right">
+<div id= "timelinewrap">
+<div id= "timeline">
+<div class="scroll-pane ui-widget ui-widget-header ui-corner-all">
+<div class="scroll-content">
+<div class="scroll-content-item ui-widget-header"><img src="chalkboard.png" height="100px" width="100px"></div>
+<div class="scroll-content-item ui-widget-header"><img src="magiclantern.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="stereoscope.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="projector.gif" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="radio.png" height="100px" width="100px"></div>
+<div class="scroll-content-item ui-widget-header"><img src="overhead.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="mimeograph.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="headset.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="sliderule.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="machine.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="television.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="filmstrip.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="scantron.jpg" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="plato.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="graphing.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="whiteboard.jpg" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="clicker.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="xo.png" height="100px" width="100px" id="two"></div>
+<div class="scroll-content-item ui-widget-header"><img src="ipadmini.png" height="100px" width="100px"></div>
+
+<div id="years">
+<ul id="dates">
+<li id="chalkboard" class="button">1801
+</li>
+<li id="lantern" class="button">1870
+</li>
+<li id="stereoscope" class="button">1905
+</li>
+<li id="filmProjector" class="button">1925
+</li>
+<li id="radio" class="button">1925
+</li>
+<li id="projector" class="button">1930
+</li>
+<li id="mimeograph" class="button">1940
+</li>
+<li id="headset" class="button">1950
+</li>
+<li id="rule" class="button">1950
+</li>
+<li id="skinner" class="button">1957
+</li>
+<li id="television" class="button">1958
+</li>
+<li id="filmstrip" class="button">1965
+</li>
+<li id="scantron" class="button">1972
+</li>
+<li id="computer" class="button">1980
+</li>
+<li id="calculator" class="button">1985
+</li>
+<li id="whiteboard" class="button">1999
+</li>
+<li id="clicker" class="button">2005
+</li>
+<li id="xo" class="button">2006
+</li>
+<li id="ipad" class="button">2010
+</li>
+
+
+
+<div class="box" id="one">
+<b>1801--Chalkboard</b>
+<p class="TLbox">A classic that still exists today, the chalkboard was first used in the United States at West Point by an English mathematician. Since then, the tool has been modernized with a porcelain enamel, actual chalk instead of pieces of slate, and blocks of felt are used as erasers rather than rags.</p>
+</div>
+<div class="box" id="three">
+<b>1870--Magic Lantern</b>
+<p class="TLbox">The Magic Lantern images printed on glass plates, some of which were completely hand-painted, but also included photographic images. It was used for the demonstration of scientific principles and to relay the latest world news. </p>
+</div>
+<div class="box" id="four">
+<b>1905--Stereoscope</b>
+<p class="TLbox">Stereoscopes show users a three-dimensional view of slides, and they were primarily used for entertainment among families. However, once they entered schools, images were meant to illustrate points made throughout lectures.</p>
+</div>
+<div class="box" id="five">
+<b>1925--Film Projector</b>
+<p class="TLbox">Film projectors were once popular among primary and secondary schools, where still images were projected similar to the motion-picture projector.</p>
+</div>
+<div class="box" id="six">
+<b>1925--Radio</b>
+<p class="TLbox">Radio stations began transmitting to a small group of teachers in the early 1920's—it's far reach and live-stream made it one of the most powerful tools in education. Students were able to listen to programs and even interact with them, extending lectures outside the classroom.</p>
+</div>
+<div class="box" id="seven">
+<b>1930--Overhead Projector</b>
+<p class="TLbox">A popular tool still used today, the overhead projector allowed teachers to demonstrate materials on a screen while facing a group of students, facilitating discussion. Its elbow-length height makes the device conducive to writing, making it easy for teachers to continue lecture by demonstrating a concept by hand. </p>
+</div>
+<div class="box" id="eight">
+<b>1940--Mimeograph</b>
+<p class="TLbox">The mimeograph was used to make copies of materials for classrooms by hand cranking a machine. It was used by teachers to make duplicates of lectures or stencils in a cheap and efficient manner. </p>
+</div>
+<div class="box" id="nine">
+<b>1950--Headsets</b>
+<p class="TLbox">Used primarily for language-learning purposes, headsets allow students to walk through various drills to better install key grammatical structures in their linguistic skill set. </p>
+</div>
+<div class="box" id="ten">
+<b>1950--Slide Rule</b>
+<p class="TLbox">A predecessor to the calculator, the slide rule computed mathematical computations by finding the numbers that align with the marks on the appropriate matching strips. Also known as a slipstick, the slide rule was mainly used for multiplication and division, and sometimes for roots, logarithms and trigonometry. </p>
+</div>
+<div class="box" id="eleven">
+<b>1957--Skinner Teaching Machine</b>
+<p class="TLbox">This mechanical invention, presented by B.F. Skinner, allowed users to walk through programmed instructions and answer provided questions. Its ability to provide immediate responses kept students interested, making it a major competitor in teching tools during the late 1950s.</p>
+</div>
+<div class="box" id="twelve">
+<b>1958--Educational Television (ETV)</b>
+<p class="TLbox">These programs were centered on classroom instruction (formal) and cultural, lifelong learning (informal). ETV provided programming that emphasized literacy, mathematics, science, geography and foreign language, which is capitalized on in the Public Broadcasting System (PBS). </p>
+</div>
+<div class="box" id="thirteen">
+<b>1965--Filmstrip Viewer</b>
+<p class="TLbox">These machines allowed individual students to view filmstrips on their own, providing a more personal form of teaching. </p>
+</div>
+<div class="box" id="fourteen">
+<b>1972--Scantron</b>
+<p class="TLbox">Scantron Corporation created a grading system that alleviated the burden of hand grading students’ multiple choice tests, saving teachers a lot of time they could put towards crafting lectures. </p>
+</div>
+<div class="box" id="fifteen">
+<b>1980--Plato Computer</b>
+<p class="TLbox">The Programmed Logic for Automated Teaching Operations (PLATO) was the first computer instruction system. Schools in the U.S. soon began implementing them in classrooms, with one computer for every 92 students in 1984. In 2009, this ratio increased to 5.3 to 1, according to the Institute of Education Sciences. </p>
+</div>
+<div class="box" id="sixteen">
+<b>1985--Graphing Calculator</b>
+<p class="TLbox">Graphic calculators made demonstrating equations much easier, and more reliable, for students. In North America, high school math teachers allow and sometimes even enourage their students to use them in class. </p>
+</div>
+<div class="box" id="seventeen">
+<b>1999--Interactive Whiteboard</b>
+<p class="TLbox">An interactive whiteboard (IWB) is an interactive board that when connected to a computer, displays the desktop onto the board’s surface. The user then has control over the computer which will be demonstrated on the screen.</p>
+</div>
+<div class="box" id="eighteen">
+<b>2005--iClicker</b>
+<p class="TLbox">Clickers are polling options for instructors to use to administer quizzes and surveys and receive immediate results in a larger classroom setting. </p>
+</div>
+<div class="box" id="nineteen">
+<b>2006--XO Laptop</b>
+<p class="TLbox">This device is targeted towards children--it is durable, cheap, and waterproof! The product is part of the One Laptop per Child program, where they are shipped off to developing countires for less than $200 apiece. </p>
+</div>
+<div class="box" id="twenty">
+<b>2010--iPad</b>
+<p class="TLbox">Apple's newest device, the iPad, rivals learning from physical textbooks. Its online library has the potential to make actual books obsolete and its plethora of educational apps is changing the way children learn in so many ways. </p>
+</div><!--END CONTENT FOR BOX-->
+
+</div><!--END DATES DIV-->
+</div><!--END YEARS DIV-->
+
+<div class="scroll-bar-wrap ui-widget-content ui-corner-bottom">
+<div class="scroll-bar"></div>
+</div><!--end scroll bar wrap-->
+
+</div><!--END SCROLL CONTENT-->
+</div><!--END THAT WEIRD THING AT TOP-->
+
+<div id="credit">(Medill/Lauren Schiappa)</div> 
+</div><!--END TIMELINE BOX-->
+</center>
+</div><!--END TIMELINE-->
+</div><!--endtimelinediv-->
+
+
+</div><!---end page wrap 4-->
+
+
+<div id = "pullquote4" data-stellar-background-ratio="0" style="background-position: 0px 0px;">
+<img src="PQUOTE4.png" class="quote" width="100%" height="auto"></div>
+<div class="bar5" id="takeaway"><p class="headlines">The Takeaway</p></div>
+
+<div class="page-wrap"><!--BEGIN FIFTH PAGE WRAP-->
+
+
+<div class="story" style="clear: both;"><p class="introduction">For all the benefits of the tablet, it should not be misinterpreted as a solution for every situation. Sometimes, Ziemke says, there is a pressure to use the iPad for every single lesson. Because the device is an expensive tool, teachers think it necessary to incorporate the iPad in every lesson, which may not always be the best tactic.</p>
+<p class="indented">
+"You need to use it when it makes sense," says Ziemke. "When it makes sense to use crayons and markers and watercolors, we use that because we want [students] to be fluid and flexible." Using a variety of mediums provides students the chance to document their thinking in many different ways.
+</p><p class="indented">
+Russom also stresses the importance of not seeing the iPad as a "cure-all" for educational problems.
+</p><p class="indented">
+"I don't believe the iPad has the potential to solve problems to any greater degree than any of the previous technological tools," he says. "Good teaching is good teaching. A good teacher can use tools very well, and a bad teacher will use them not as well. I think the iPad has a lot of potential in the hands of capable teachers."
+</p><p class="indented">
+This means setting clear expectations for how the iPad will be used to target specific skills, how the children should use them, and how the teacher will follow up on the data. Creating this kind of accountability for both teachers and students is what drives positive results, according to Russom. eSpark's results certainly attest to that.
+</p><p class="indented">
+"Student engagement is off the charts," Russom boasts. "Teachers say the students are far more engaged in iPads than they are in computers. Every single partner that we work with says that." In terms of student achievement, Russom says that eSpark sees a huge difference in the growth of students who use iPads versus students who do not. Students using the eSpark platform achieve two times more growth.
+</p><p class="indented">
+If results like these continue, and schools can adapt quickly as they learn from the current classroom trials, then perhaps in the next few years, there will be a definitive answer for whether or not iPads are a permanent, lasting solution.
+
+	</p></div>
+
+   
+
+
+    <div class="headlines" id="tablet"><p class=headlines2 id="appshead">Apps Worth Trying</p></div>
+	<p class="indented">
+	According to <a href="http://www.babble.com/" target="_blank" style="text-decoration: none;">Babble</a>, a Disney affiliated parent blog, the following apps are the top choices in their respective categories for iPhones and iPads. Click on their names to learn more about them, and then perhaps download one!
+	</p>
+<div id="ipadcontainer">
+
+<div id="accordion">
+
+	<h3 style="background-color: #F25757; color:white"; id="test1">Top Rated</h3></style>
+	<div>
+	<p class="indented" id="ipadp">
+	The following apps are the best of the best according to Babble-and they're all safe for children over 4 years. Click on their names for more information! 
+	</p>
+		<p><div class="appslist" id="firstlist">
+		<ul id="thiscrap">
+			<li id="app1">
+				<a href="https://itunes.apple.com/us/app/jellytoons-toddler-skills/id422942463?mt=8" target="_blank"><img src="zero.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app2">
+				<a href="https://itunes.apple.com/us/app/word-wagon-by-duck-duck-moose/id423629048?mt=8" target="_blank"><img src="one.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app3">
+				<a href="https://itunes.apple.com/us/app/speech-with-milo-sequencing/id431803095?mt=8" target="_blank"><img src="two.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app4">
+				<a href="https://itunes.apple.com/us/app/stack-the-countries/id407838198?mt=8" target="_blank"><img src="three.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app5">
+				<a href="https://itunes.apple.com/us/app/park-math-by-duck-duck-moose/id391407836?mt=8" target="_blank"><img src="four.jpg" height="70px" width="70px"></img></a>
+			</li>
+		</ul><!--END APPS LIST-->
+	<div id="descriptions">
+		<ul id="appdescriptions">
+			<li><div class="TR1" style="color: black;">Jellytoons Toddler Skills</div></li>
+			<li><div class="TR1" style="color: black;">Word Wagon</div></li>
+			<li><div class="TR1" style="color: black;">Speech with Milo</div></li>
+			<li><div class="TR1" style="color: black;">Stack the Countries</div></li>
+			<li><div class="TR1" style="color: black;">Park Math</div></li>
+		</ul>
+	</div><!--END DESCRIPTIONS-->
+	</div><!--END APPS DIV-->
+	</p>
+	</div>
+	<h3 style="background-color: #24B0BF; color:white"; id="test2">Vocabulary</h3></style>
+	<div>
+	<p class="indented" id="ipadp">
+	These are the top rated apps in building children's vocabulary while still keeping it fun. Click on their names to see where you can download them! 
+	</p>
+	<p><div class="appslist" id="appslist2">
+	<ul id="thiscrap">
+			<li id="app1" class="coffee">
+				<a href="https://itunes.apple.com/us/app/montessori-crosswords-teach/id384334005?mt=8" target="_blank"><img src="cat.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app2" class="coffee">
+				<a href="https://itunes.apple.com/us/app/bookworm/id307176281?mt=8" target="_blank"><img src="bookworm.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app3" class="coffee">
+				<a href="https://itunes.apple.com/us/app/chicktionary-for-ipad/id365374807?mt=8" target="_blank"><img src="chick.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app4" class="coffee">
+				<a href="https://itunes.apple.com/us/app/wurdle/id287712243?mt=8" target="_blank"><img src="word.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app5" class="coffee">
+				<a href="https://itunes.apple.com/us/app/word-sort-by-grammaropolis/id416441549?mt=8" target="_blank"><img src="sort.jpg" height="70px" width="70px"></img></a>
+			</li>
+		</ul><!--END APPS LIST-->
+	<div id="descriptions">
+		<ul id="appdescriptions">
+			<li><div class="TR1" style="color: black;">Montessori Crosswords</div></li>
+			<li><div class="TR1" style="color: black;">Bookworm</div></li>
+			<li><div class="TR1" style="color: black;">Chicktionary</div></li>
+			<li><div class="TR1" style="color: black;">Wurdle</div></li>
+			<li><div class="TR1" style="color: black;">Word Sort</div></li>
+		</ul>
+	</div><!--END DESCRIPTIONS-->
+	</div><!--END APPS DIV-->
+	</p>
+	</div>
+<h3 style="background-color: #B9F234; color:white"; id="test3">Art</h3></style>
+	<div>
+	<p class="indented" id="ipadp">
+	These apps boost children's knowledge of the color wheel, and engages them in releasing their creativity. Click on their titles for more information!
+	</p>
+	<p><div class="appslist" id="appslist2">
+	<ul id="thiscrap">
+			<li id="app1" class="coffee">
+				<a href="https://itunes.apple.com/us/app/connect-n-color/id422571880?mt=8" target="_blank"><img src="art1.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app2" class="coffee">
+				<a href="https://itunes.apple.com/us/app/faces-imake-creative-craziness/id357230884?mt=8" target="_blank"><img src="art2.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app3" class="coffee">
+				<a href="https://itunes.apple.com/us/app/kids-doodle-movie-kids-color/id460712294?mt=8" target="_blank"><img src="art3.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app4" class="coffee">
+				<a href="https://itunes.apple.com/us/app/colortoons/id369399737?mt=8" target="_blank"><img src="art4.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app5" class="coffee">
+				<a href="https://itunes.apple.com/us/app/123-color-hd-talking-coloring/id364892854?mt=8" target="_blank"><img src="art5.jpg" height="70px" width="70px"></img></a>
+			</li>
+		</ul><!--END APPS LIST-->
+	<div id="descriptions">
+		<ul id="appdescriptions">
+			<li><div class="TR1" style="color: black;"><center>Connect N Color</div></li>
+			<li><div class="TR1" style="color: black;">Faces iMake</div></li>
+			<li><div class="TR1" style="color: black;">Kids Doodle</div></li>
+			<li><div class="TR1" style="color: black;">Colortoons</div></li>
+			<li><div class="TR1" style="color: black;">123 Color HD</center></div></li>
+		</ul>
+	</div><!--END DESCRIPTIONS-->
+	</div><!--END APPS DIV-->
+	</p>
+	</div>
+<h3 style="background-color: #F7AB3E; color:white"; id="test4">Motor</h3></style>
+	<div>
+	<p class="indented" id="ipadp">
+	These are the top rated apps that help children with their spatial recognition. Careful, though, once these are downloaded, there's no guarantee that the kids won't put them down! Click on the titles for more!
+	</p>
+	<p><div class="appslist" id="appslist2">
+	<ul id="thiscrap">
+			<li id="app1" class="coffee">
+				<a href="https://itunes.apple.com/us/app/tiny-wings/id417817520?mt=8" target="_blank"><img src="motor1.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app2" class="coffee">
+				<a href="https://itunes.apple.com/us/app/dots-for-tots-teach-toddlers/id377888480?mt=8" target="_blank"><img src="motor2.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app3" class="coffee">
+				<a href="https://itunes.apple.com/us/app/doodle-jump/id307727765?mt=8" target="_blank"><img src="motor3.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app4" class="coffee">
+				<a href="https://itunes.apple.com/us/app/fruit-ninja/id362949845?mt=8" target="_blank"><img src="motor4.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app5" class="coffee">
+				<a href="https://itunes.apple.com/us/app/cut-the-rope/id380293530?mt=8" target="_blank"><img src="motor5.jpg" height="70px" width="70px"></img></a>
+			</li>
+		</ul><!--END APPS LIST-->
+	<div id="descriptions">
+		<ul id="appdescriptions">
+			<li><div class="TR1" style="color: black;"><center>Tiny Wings</div></li>
+			<li><div class="TR1" style="color: black;">Dots for Tots</div></li>
+			<li><div class="TR1" style="color: black;">Doodle Jump</div></li>
+			<li><div class="TR1" style="color: black;">Fruit Ninja</div></li>
+			<li><div class="TR1" style="color: black;">Cut the Rope</center></div></li>
+		</ul>
+	</div><!--END DESCRIPTIONS-->
+	</div><!--END APPS DIV-->
+	</p>
+	</div>
+	
+<h3 style="background-color: #CCCCCC; color:white"; id="test5">Reading</h3></style>
+	<div>
+	<p class="indented" id="ipadp">
+	These apps encourage literacy by storing childrens books right on the device. The animations and bright colors in each app make reading more engaging, too! Click on the titles to purchase. 
+	</p>
+	<p><div class="appslist" id="appslist2">
+	<ul id="thiscrap">
+			<li id="app1" class="coffee">
+				<a href="https://itunes.apple.com/us/app/bookster/id395395617?mt=8" target="_blank"><img src="read1.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app2" class="coffee">
+				<a href="https://itunes.apple.com/us/app/tales2go/id458539653?mt=8" target="_blank"><img src="read2.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app3" class="coffee">
+				<a href="https://itunes.apple.com/us/app/a-story-before-bed/id364887654?mt=8" target="_blank"><img src="read3.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app4" class="coffee">
+				<a href="https://itunes.apple.com/us/app/playtales-best-kids-book-app/id379892783?mt=8" target="_blank"><img src="read4.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app5" class="coffee">
+				<a href="https://itunes.apple.com/us/app/meegenius!-books-read-along/id364734296?mt=8" target="_blank"><img src="read5.jpg" height="70px" width="70px"></img></a>
+			</li>
+		</ul><!--END APPS LIST-->
+	<div id="descriptions">
+		<ul id="appdescriptions">
+			<li><div class="TR1" style="color: black;"><center>Bookster</div></li>
+			<li><div class="TR1" style="color: black;">Tales2Go</div></li>
+			<li><div class="TR1" style="color: black;">A Story Before Bed</div></li>
+			<li><div class="TR1" style="color: black;">PlayTales</div></li>
+			<li><div class="TR1" style="color: black;">MeeGenius!</center></div></li>
+		</ul>
+	</div><!--END DESCRIPTIONS-->
+	</div><!--END APPS DIV-->
+	</p>
+	</div>	
+<h3 style="background-color: #AE42F2; color:white"; id="test6">Free Apps</h3></style>
+	<div>
+	<p class="indented" id="ipadp">
+	The following apps are the top rated educational applications that are free. There's one for every category--art, reading, math, vocab, and spatial recognition. Click on their titles for more!
+	</p>
+	<p><div class="appslist" id="appslist2">
+	<ul id="thiscrap">
+			<li id="app1" class="coffee">
+				<a href="https://itunes.apple.com/us/app/shapes-toddler-preschool/id303153532?mt=8" target="_blank"><img src="free1.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app2" class="coffee">
+				<a href="https://itunes.apple.com/us/app/iwritewords-lite/id308152258?mt=8" target="_blank"><img src="free2.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app3" class="coffee">
+				<a href="https://itunes.apple.com/us/app/feed-me!-pencilbot-preschool/id484337077?mt=8" target="_blank"><img src="free3.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app4" class="coffee">
+				<a href="https://itunes.apple.com/us/app/says-for-kids/id284424567?mt=8" target="_blank"><img src="free4.jpg" height="70px" width="70px"></img></a>
+			</li>
+			<li id="app5" class="coffee">
+				<a href="https://itunes.apple.com/us/app/pop-math-lite/id303258911?mt=8" target="_blank"><img src="free5.jpg" height="70px" width="70px"></img></a>
+			</li>
+		</ul><!--END APPS LIST-->
+	<div id="descriptions">
+		<ul id="appdescriptions">
+			<li><div class="TR1" style="color: black;"><center>Shapes Toddler Preschool</div></li>
+			<li><div class="TR1" style="color: black;">iWriteWords Lite</div></li>
+			<li><div class="TR1" style="color: black;">Feed Me!</div></li>
+			<li><div class="TR1" style="color: black;">Says For Kids</div></li>
+			<li><div class="TR1" style="color: black;">Pop Math Lite</center></div></li>
+		</ul>
+	</div><!--END DESCRIPTIONS-->
+	</div><!--END APPS DIV-->
+	</p>
+	</div>
+	
+	
+</div><!--END ACCORDION-->
+</div><!---end ipadcontainer-->
+<div id="credit">(Medill/Lauren Schiappa)</div> 
+	<script>
+	$("#accordion").accordion();
+	</script>
+
+
+
+<script src="stellar.js" type="text/javascript"></script>
+	
+	<script>
+		$.stellar();
+	</script>
+
+</div><!--END PAGE WRAP-->
+
+</body>
+
+</html>
+
+
+

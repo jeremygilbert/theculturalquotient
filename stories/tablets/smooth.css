@@ -1,0 +1,105 @@
+#two{
+	border-radius: 15px;
+	}
+	
+#years ul 
+	{
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+.button{
+	margin-left: 45px;
+	margin-right: 35px;
+	}
+	
+#years ul li {
+	display: inline;
+	}
+	
+/* scrollbar */
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/*this is the content*/
+.box{
+	background-color: #9CEDE4;
+	border-style: solid;
+	border: grey 5px;
+	border-radius: 15px;
+	height: 180px;
+	width: 550px;
+	font-family: "helvetica";
+	float: left;
+	margin-top: 20px;
+	margin-left: 50px;
+	padding: 20px;
+	position: absolute;
+	color: black;
+	}
+#years{
+	position: relative;
+	}
+.button{
+	color: black;
+	}
+	
+#three{
+	display: none;
+	}
+	
+/*this ends the content*/
+
+
+/* DO NOT DELETE*/
+.ui-widget {
+	font-family: Helvetica,sans-serif;
+	font-size: 1.1em;
+}
+
+.ui-widget-content {
+	background: #CCCCCC 50% 50% repeat-x;
+	color: black;
+}
+
+.ui-widget-header {
+	border: 3px solid black;
+	border-radius: 15px;
+	background: white url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+	color: white;
+	width: 500px;
+	font-weight: bold;
+}
+
+
+/* SCROLLBAR COLOR*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+	font-weight: normal;
+	color: #555555;
+}
+
+
+
+

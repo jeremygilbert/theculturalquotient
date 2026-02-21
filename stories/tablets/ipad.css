@@ -1,0 +1,72 @@
+#ipadcontainer{
+background-image: url('ipadapp.png');
+background-repeat: no-repeat;
+background-size: cover;
+height: 700px;
+width: 900px;
+margin-top: 0px;
+}
+#accordion{
+height: 700px;
+width: 720px;
+position: relative;
+top: 100px;
+left: 100px;
+}
+
+.TR1{
+	font-size: 12px;
+	width: 30px;
+	height: 30px;
+	margin-right: 15px;
+	float: left;
+	position: center;
+	}
+
+	
+/*first apps list*/	
+.appslist ul li{
+	display: inline;
+	margin-right: 30px;
+	float: left;
+	margin-top: 0px;
+	position: relative;
+	padding-top: 0px;
+	}
+	
+#appslist2 ul li{
+	margin-top: 0px;
+	}
+
+#thiscrap{
+	margin-left: 75px;
+	clear: both;
+	}
+#descriptions ul li{
+	display: inline;
+	float: left;
+	list-style-type: none;
+	margin-right: 55px;
+	position: relative;
+	}
+#appdescriptions{
+	color: white;
+	font-family: "helvetica";
+	margin-left: 90px;
+	clear: both;
+	}
+.appcat{
+	color: black;
+	font-family: "helvetica";
+	margin-top: 100px;
+	float: left;
+	margin-left: 110px;
+	font-size: 25px;
+	clear: both;
+	margin-bottom: 0px;
+	position: relative;
+	}
+#appcat2{
+	margin-top: 35px;
+	margin-bottom: 10px;
+	}

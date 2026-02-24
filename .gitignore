@@ -1,0 +1,9 @@
+# macOS metadata
+.DS_Store
+
+# Large video files (exceed GitHub's 100MB file limit)
+# Host these externally (e.g. YouTube, Vimeo, or a CDN)
+*.mpg
+*.mov
+*.mp4
+*.avi
